@@ -50,7 +50,7 @@ const Forms = () => {
 
     };
 
-    const saveUser = (userObject) => {
+    const saveUser = (userObject, callback) => {
         if (validateForm(userObject)) {
             let availableUsers = formValues.users;
             let userList = availableUsers ? [...availableUsers, userObject]: [userObject];
@@ -60,6 +60,7 @@ const Forms = () => {
                 users: userList
             });
             localStorage.setItem('userList', JSON.stringify(userList));
+            callback();
         } else {
             console.log('Form not valid.');
         }
@@ -80,7 +81,7 @@ const Forms = () => {
         formErrors,
         resetUserFormErrors,
         removeUser,
-        saveUser: (userObject) => saveUser(userObject),
+        saveUser: (userObject, callback) => saveUser(userObject, callback),
         changeFormValues: (fieldObject) => changeFormValues(fieldObject)
     });
 

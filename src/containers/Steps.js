@@ -91,7 +91,7 @@ const UserInformation = (props) => {
                 {
                     openModal ? (
                         <Modal
-                            saveUser={(userObject) => saveUser(userObject)}
+                            saveUser={(userObject, callback) => saveUser(userObject, callback)}
                             schenario='create'
                             formValues={formValues}
                             resetUserFormErrors={resetUserFormErrors}

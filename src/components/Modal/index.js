@@ -85,7 +85,7 @@ const Modal = (props) => {
         if (schenario === "create") {
             let primaryKey = 1;
 
-            if(formValues.users){
+            if (formValues.users) {
                 const pkList = formValues.users.map(user => user.id);
                 primaryKey = Math.max(...pkList);
                 primaryKey = pkList.length > 0 ? primaryKey + 1 : 1
@@ -94,8 +94,7 @@ const Modal = (props) => {
                 ...form,
                 id: primaryKey,
             };
-            saveUser(newUser);
-            handleClose();
+            saveUser(newUser, handleClose);
         } else {
             alert('Schenario is update');
         }
