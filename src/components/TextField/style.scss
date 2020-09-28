@@ -1,0 +1,54 @@
+.textFieldComponent {
+  height: auto;
+  width: 280px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 22px;
+
+  input {
+    height: 40px;
+    width: 280px;
+    border-radius: 0;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #525252;
+    background: rgba(244, 245, 246, 0.5);
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &.hasError {
+      border: 1px solid #961BBD;
+    }
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+
+    span {
+      font-family: "Fira Code Medium", sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0;
+      text-align: left;
+      color: #525252;
+    }
+
+    img {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+  }
+
+
+}

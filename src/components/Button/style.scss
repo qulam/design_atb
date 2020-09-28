@@ -1,0 +1,25 @@
+.buttonComponent {
+  font-family: 'Roboto Light', sans-serif;
+  height: 40px;
+  padding-left: 27px;
+  padding-right: 27px;
+  border-radius: 5px;
+  margin-top: 32px;
+  background-color: #FFD217;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  cursor: pointer;
+
+  &.full {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0;
+    width: 100%;
+    text-align: center;
+  }
+}

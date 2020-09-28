@@ -1,0 +1,46 @@
+.dropDownComponent {
+  margin-top: 22px;
+
+  label {
+    display: flex;
+    align-items: center;
+    font-family: "Fira Code Medium", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0;
+    padding-bottom: 10px;
+    text-align: left;
+    color: #525252;
+
+    img {
+      width: 15px;
+      height: 15px;
+      margin-left: 9px;
+      cursor: pointer;
+    }
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 280px;
+    height: 40px;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #F4F5F6 url("../../assets/images/icons/input-arrow-down.svg") no-repeat 95%;
+
+    &.hasError {
+      border: 1px solid #961BBD;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+#modalContainer {
+  position: fixed;
+  display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  z-index: 2;
+
+  &.active {
+    transform: scale(1);
+
+    .modalBackground {
+      background: rgba(0, 0, 0, .0);
+      animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+      .modalContent {
+        height: auto;
+        width: 340px;
+        border-radius: 10px;
+        padding: 25px 30px;
+        background-color: transparent;
+        animation: modalFadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        z-index: 3;
+
+        .modalHeader {
+          display: flex;
+          justify-content: space-between;
+
+          .modalCloseButton {
+            border: 1px solid;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            padding: 4px;
+            cursor: pointer;
+          }
+
+          span {
+            font-family: "Fira Code", sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 22px;
+            letter-spacing: 0;
+            text-align: left;
+            color: #525252;
+          }
+        }
+
+      }
+    }
+
+    &.out {
+      animation: quickScaleDown 0s .5s linear forwards;
+
+      .modalBackground {
+        animation: fadeOut .1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+
+        .modalContent {
+          animation: modalFadeOut .1s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+        }
+      }
+    }
+  }
+
+  .modalBackground {
+    display: table-cell;
+    background: rgba(0, 0, 0, .8);
+    text-align: center;
+    vertical-align: middle;
+
+    .modalContent {
+      background: white;
+      padding: 50px;
+      display: inline-block;
+      border-radius: 3px;
+      font-weight: 300;
+      position: relative;
+    }
+  }
+
+}
+
+@keyframes fadeIn {
+  0% {
+    background: rgba(0, 0, 0, .0);
+  }
+  100% {
+    background: rgba(0, 0, 0, .5);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    background: rgba(0, 0, 0, .5);
+  }
+  100% {
+    background: rgba(0, 0, 0, .0);
+  }
+}
+
+@keyframes quickScaleDown {
+  0% {
+    transform: scale(1);
+  }
+  99.9% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+
+@keyframes modalFadeIn {
+  0% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: white;
+  }
+}
+
+@keyframes modalFadeOut {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}

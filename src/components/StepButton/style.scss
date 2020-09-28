@@ -1,0 +1,25 @@
+.stepButtonComponent {
+  height: 40px;
+  width: 192px;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #333333;
+  cursor: pointer;
+
+  &.outlined {
+    border: 1px solid #9B9B9B;
+    background: #fff;
+  }
+
+  &.contained {
+    background: #FFD217;
+    margin-left: auto;
+  }
+
+}

@@ -1,0 +1,77 @@
+.progressBarComponent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 617px;
+  margin: 25px auto;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #FFD217;
+    bottom: -20px;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+  }
+
+  .progress {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      position: relative;
+      font-family: "Fira Code Medium", sans-serif;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 14px;
+      letter-spacing: 0;
+      text-align: center;
+      color: rgba(82, 82, 82, 0.5);
+    }
+
+    &:last-child {
+      justify-content: flex-end;
+
+      span {
+        transform: translateX(100%);
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      height: 17px;
+      width: 17px;
+      border-radius: 50%;
+      border: 4px solid #FFD217;
+      background: #fff;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+      cursor: pointer;
+      z-index: 1;
+    }
+
+    &:last-child:after {
+      transform: translate(150%, 50%);
+    }
+
+    &.active {
+      &:after {
+        background: #FFD217;
+      }
+      span {
+        font-family: 'Fira Code Medium', sans-serif;
+        color: #525252;
+      }
+    }
+  }
+}

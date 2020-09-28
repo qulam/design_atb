@@ -1,0 +1,40 @@
+.langComponent {
+  width: 86px;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #F4F5F6;
+
+  li {
+    display: none;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: #525252;
+      font-size: 12px;
+
+      span {
+        font-family: 'Roboto', sans-serif;
+        display: inline-flex;
+        flex: 1;
+        margin-right: 10px;
+      }
+
+      .flag {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.langComponent.show {
+  li {
+    display: block;
+  }
+}

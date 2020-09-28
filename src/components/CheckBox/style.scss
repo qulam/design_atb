@@ -1,0 +1,25 @@
+.checkBoxComponent {
+  margin-top: 22px;
+
+  label {
+    display: flex;
+    align-items: center;
+    font-family: "Fira Code Medium", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0;
+    text-align: left;
+    color: #525252;
+
+    input {
+      margin-right: 10px;
+    }
+
+    img {
+      margin-left: 10px;
+    }
+  }
+
+}
